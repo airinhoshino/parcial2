@@ -87,7 +87,7 @@ function mostrarProductos(arrayProducto) {
   });
 }
 
-//Función para agregar los productos al carrito. FALTA MODAL. 
+//Función para agregar los productos al carrito. FALTA MODA DEL CARRITO.
 function agregarAlCarrito(idProducto) {
   let productoArray = productos[idProducto - 1]; //Se le resta 1 al id xq los array cuentan desde 0
   let producto = new Producto(
@@ -104,17 +104,11 @@ function agregarAlCarrito(idProducto) {
   cantidadDeProductos.innerText = carritoDeCompras.cantidadDeProductos();
   tuTotalCantidad.innerText = carritoDeCompras.cantidadDeProductos();
 
-  let contenedorItemProducto = document.querySelector("#contenedorItemCarrito");
-
-  let misProductos = carritoDeCompras.devolverProductos();
-  // contenedorItemProducto.replaceChildren();
   totalCompra();
-  misProductos.forEach(element => {
-      contenedorItemProducto.append(carritoDeCompras.mostrarCardProducto(element));
-  });
+ 
 }
 
-
+//Función que muestra el precio total de la compra
 function totalCompra() {
   let tuTotal = document.querySelector(".tuTotal");
   tuTotal.innerText = carritoDeCompras.mostrarPrecioTotalDeLaCompra();
@@ -133,6 +127,8 @@ function mostrarModalDetalle(idProd){
     document.querySelector("#contenedorModal").replaceChildren();
     document.querySelector("#contenedorModal").append(productoObject.imprimirModal(producto));
 }
+
+
 
 //Evento para Filtro de categorías
 document.querySelector("select").addEventListener("change", (e) => {

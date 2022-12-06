@@ -65,13 +65,7 @@ svg {
     scroll-behavior: auto !important;
   }
 }
-@font-face {
-  font-family: "Jost";
-  src: url("assets/fonts/jost-variablefont_wght-webfont.eot");
-  src: url("assets/fonts/jost-variablefont_wght-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/jost-variablefont_wght-webfont.woff2") format("woff2"), url("assets/fonts/jost-variablefont_wght-webfont.woff") format("woff"), url("assets/fonts/jost-variablefont_wght-webfont.ttf") format("truetype"), url("assets/fonts/jost-variablefont_wght-webfont.svg#neue_plakbold") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
+
 body {
   font-family: "Jost", Arial, Helvetica, sans-serif;
   background-color: #1a1c1d;
@@ -238,6 +232,25 @@ input[type='button']:hover,
 input[type='submit']:hover {
     color: #d2007e;
     background: #ffa2dd;
+}
+
+button.btn.btn-trash,
+input[type='button'],
+input[type='submit'] {
+    margin-top:0;
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    margin-left: 1rem;
+}
+
+button.btn.btn-trash:hover,
+input[type='button']:hover,
+input[type='submit']:hover {
+    color: #cbd9dc;
 }
 
 .sidenav {
