@@ -479,7 +479,7 @@ footer ul {
 }
 
 footer ul li {
-    font-family: 'Montserrat';
+    font-family: "Jost", Arial, Helvetica, sans-serif;
     font-size: 1.4em;
     line-height: 1.5;
     text-align: center;
@@ -487,7 +487,7 @@ footer ul li {
 }
 
 footer ul li a {
-    font-family: 'Montserrat';
+    font-family: "Jost", Arial, Helvetica, sans-serif;
     font-size: 1em;
     text-decoration: none;
     color: #d0e0e3;
