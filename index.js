@@ -67,7 +67,7 @@ let productos = [
 //Defino variables para agarrar el html e ir completándolos
 let sectionProducto = document.querySelector("#productos");
 let carritoDeCompras = new Carrito();
-let cantidadDeProductos = document.querySelector("#monstrarCantidad");
+let cantidadDeProductos = document.querySelector("#mostrarCantidad");
 let tuTotalCantidad = document.querySelector("#tuTotalCantidad");
 
 //Función para mostrar los productos. Se mostrarán como cards.
@@ -105,7 +105,7 @@ function agregarAlCarrito(idProducto) {
   tuTotalCantidad.innerText = carritoDeCompras.cantidadDeProductos();
 
   totalCompra();
- 
+
 }
 
 //Función que muestra el precio total de la compra
@@ -135,10 +135,16 @@ document.querySelector("select").addEventListener("change", (e) => {
   /* Guardo el option elegido */
   let categoria = e.target.value;
 
-  let filtrado = productos.filter((producto) =>
-    producto.categoria.includes(categoria)
-  );
-  console.log(filtrado);
+  if (categoria != "Todos"){
+        let filtrado = productos.filter((producto) => producto.categoria.includes(categoria));
+
+        sectionProducto.replaceChildren();
+        mostrarProductos(filtrado);
+
+    }else{
+        sectionProducto.replaceChildren();
+        mostrarProductos(productos);
+    }
 });
 
 mostrarProductos(productos);

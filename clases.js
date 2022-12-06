@@ -33,8 +33,8 @@ class Producto {
   mostrarProducto() {
 
     //div general que mostratá los productos
-    let divProducto = document.createElement("div"); 
-    divProducto.className = "card"; 
+    let divProducto = document.createElement("div");
+    divProducto.className = "card";
 
     //contenedor de imagen con sus atributos obligatorios
     let img = document.createElement("img");
@@ -46,7 +46,7 @@ class Producto {
     let categoriaProducto = document.createElement("span");
     categoriaProducto.className = "card-category";
     categoriaProducto.innerText = `${this.categoria}`;
-   
+
     //se agregan al div general los contenedores de imagen y de categoría
     divProducto.append(categoriaProducto);
     divProducto.append(img);
@@ -59,8 +59,6 @@ class Producto {
     let botonDetalleProducto = document.createElement("button");
     botonDetalleProducto.className = "fa-solid fa-circle-info btn btn-secondary";
     botonDetalleProducto.innerText = "";
-    botonDetalleProducto.setAttribute("data-bs-toggle", "modal");
-    botonDetalleProducto.setAttribute("data-bs-target", "#exampleModal");
     botonDetalleProducto.setAttribute(
       "onclick",
       `mostrarModalDetalle(${this.id})`
@@ -79,20 +77,20 @@ class Producto {
     precioProdcuto.innerText = `$ ${this.precio}`;
     cardBody.append(precioProdcuto);
 
-    //descripción del producto  
+    //descripción del producto
     let descripcionProducto = document.createElement("p");
     descripcionProducto.className = "card-text";
     descripcionProducto.innerText = `${this.descripcion}`;
     cardBody.append(descripcionProducto);
 
-    //botón de agregar al carrito  
+    //botón de agregar al carrito
     let botonAgregarCarrito = document.createElement("button");
     botonAgregarCarrito.className = "btn btn-primary addCart";
     botonAgregarCarrito.innerText = "Agregar al carrito";
     botonAgregarCarrito.setAttribute("onclick", `agregarAlCarrito(${this.id})`);
     cardBody.append(botonAgregarCarrito);
 
-    //Se agrega el cardBody al div general del producto  
+    //Se agrega el cardBody al div general del producto
     divProducto.append(cardBody);
 
     return divProducto;
