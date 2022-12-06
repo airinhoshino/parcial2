@@ -138,7 +138,7 @@ function mostrarModalDetalle(idProd){
         producto = element;
       }
     });
-    let productoObject = new Producto(producto.id, producto.nombre, producto.descripcion, producto.precio, producto.imagen, producto.categoria, producto.infoextra);
+    let productoObject = new Producto(producto.id, producto.nombre, producto.descripcion, producto.precio, producto.imagen, producto.altimagen, producto.categoria, producto.infoextra);
     document.querySelector("#contenedorModal").replaceChildren();
     document.querySelector("#contenedorModal").append(productoObject.imprimirModal(producto));
 }
