@@ -1,5 +1,6 @@
 "use strict";
 
+//Creo un array de productos para luego mostrar dinámicamente
 let productos = [
   {
     id: 1,
@@ -63,13 +64,13 @@ let productos = [
   },
 ];
 
+//Defino variables para agarrar el html e ir completándolos
 let sectionProducto = document.querySelector("#productos");
-
 let carritoDeCompras = new Carrito();
 let cantidadDeProductos = document.querySelector("#monstrarCantidad");
-let removerTodosLosProductos = document.querySelector("#removeAllProd");
 let tuTotalCantidad = document.querySelector("#tuTotalCantidad");
 
+//Función para mostrar los productos. Se mostrarán como cards.
 function mostrarProductos(arrayProducto) {
   arrayProducto.forEach((p) => {
     let producto = new Producto(
@@ -86,8 +87,9 @@ function mostrarProductos(arrayProducto) {
   });
 }
 
+//Función para agregar los productos al carrito. FALTA MODAL. 
 function agregarAlCarrito(idProducto) {
-  let productoArray = productos[idProducto - 1];
+  let productoArray = productos[idProducto - 1]; //Se le resta 1 al id xq los array cuentan desde 0
   let producto = new Producto(
     productoArray.id,
     productoArray.nombre,
@@ -98,7 +100,7 @@ function agregarAlCarrito(idProducto) {
     productoArray.categoria,
     productoArray.infoextra
   );
-  carritoDeCompras.agregarProducto(producto);
+  carritoDeCompras.agregarProducto(producto); //Agrego un producto al carrito
   cantidadDeProductos.innerText = carritoDeCompras.cantidadDeProductos();
   tuTotalCantidad.innerText = carritoDeCompras.cantidadDeProductos();
 
@@ -112,17 +114,6 @@ function agregarAlCarrito(idProducto) {
   });
 }
 
-function quitarProductoDelCarrito (idProducto,element){
-
-    let contenedorItem = element.parentNode.parentNode;
-
-    contenedorItem.remove();
-    carritoDeCompras.quitarProductoDelCarrito(idProducto);
-    cantidadDeProductos.innerText = carritoDeCompras.cantidadDeProductos();
-    tuTotalCantidad.innerText = carritoDeCompras.cantidadDeProductos();
-totalCompra();
-
-}
 
 function totalCompra() {
   let tuTotal = document.querySelector(".tuTotal");
@@ -138,7 +129,7 @@ function mostrarModalDetalle(idProd){
         producto = element;
       }
     });
-    let productoObject = new Producto(producto.id, producto.nombre, producto.descripcion, producto.precio, producto.imagen, producto.altimagen, producto.categoria, producto.infoextra);
+    let productoObject = new Producto(producto.id, producto.nombre, producto.descripcion, producto.precio, producto.imagen, producto.categoria, producto.infoextra);
     document.querySelector("#contenedorModal").replaceChildren();
     document.querySelector("#contenedorModal").append(productoObject.imprimirModal(producto));
 }
