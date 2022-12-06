@@ -13,7 +13,7 @@ let productos = [
     imagen: "img/boxregalo.webp",
     altimagen: "boxregalo",
     categoria: "Kit",
-    infoextra: "infoextra1",
+    infoextra: "Manzanilla y cedrón",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ let productos = [
     imagen: "img/librote.webp",
     altimagen: "libroblends",
     categoria: "Accesorios",
-    infoextra: "infoextra2",
+    infoextra: "Editorial Ateneo",
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ let productos = [
     imagen: "img/matchabox.webp",
     altimagen: "matchabox",
     categoria: "Kit",
-    infoextra: "infoextra3",
+    infoextra: "Origen Indonesia",
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ let productos = [
     imagen: "img/matchakit.webp",
     altimagen: "matchakit",
     categoria: "Accesorios",
-    infoextra: "infoextra4",
+    infoextra: "Calidad ISO",
   },
   {
     id: 5,
@@ -53,7 +53,7 @@ let productos = [
     imagen: "img/megabox.webp",
     altimagen: "altimagen5",
     categoria: "Blends",
-    infoextra: "infoextra5",
+    infoextra: "12 Sabores",
   },
   {
     id: 6,
@@ -63,7 +63,7 @@ let productos = [
     imagen: "img/saquitos.webp",
     altimagen: "saquitoste",
     categoria: "Blends",
-    infoextra: "infoextra6",
+    infoextra: "10 sobres",
   },
 ];
 
