@@ -1,9 +1,5 @@
 "use strict";
 
-/*
- *  APELLIDOS
- */
-
 let productos = [
   {
     id: 1,
@@ -133,15 +129,6 @@ function totalCompra() {
   tuTotal.innerText = carritoDeCompras.mostrarPrecioTotalDeLaCompra();
 }
 
-vaciarCarrito.addEventListener("click", function(){
-    carritoDeCompras.quitarTodosLosProducto();
-    document.querySelector("#contenedorItemCarrito").replaceChildren();
-
-    totalCompra();
-    cantidadDeProductos.innerText = carritoDeCompras.cantidadDeProductos();
-    tuTotalCantidad.innerText = carritoDeCompras.cantidadDeProductos();
-
-});
 
 function mostrarModalDetalle(idProd){
     let producto = null;
@@ -152,8 +139,8 @@ function mostrarModalDetalle(idProd){
       }
     });
     let productoObject = new Producto(producto.id, producto.nombre, producto.descripcion, producto.precio, producto.imagen, producto.categoria, producto.infoextra);
-    document.querySelector("#contenedorDescripLargo").replaceChildren();
-    document.querySelector("#contenedorDescripLargo").append(productoObject.imprimirModal(producto));
+    document.querySelector("#contenedorModal").replaceChildren();
+    document.querySelector("#contenedorModal").append(productoObject.imprimirModal(producto));
 }
 
 //Evento para Filtro de categorías

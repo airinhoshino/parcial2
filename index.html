@@ -19,7 +19,7 @@
             <div id="minicarrito">
                 <ul>
                     <li><i class="fa-solid fa-cart-shopping"></i> <span id="monstrarCantidad">0</span> ítems agregados</li>
-                    <li>$ <span class="tuTotal">0</span> PES es el total</li>
+                    <li>$ <span id="tuTotalCantidad"class="tuTotal">0</span> PES es el total</li>
                     <li>
                         <!-- Filtro de categoría, no se si se debe crear dinámico. -->
                         <label for="categorias-productos">Filtrar por</label>
@@ -42,6 +42,11 @@
                 <!-- Acá se crean dinámicamente cards con los productos -->
             </section>
 
+             <!-- Creo el div #contenedorModal y genero su contenido dinámicamente -->
+         <div id="contenedorModal"> 
+            
+        </div>
+
         </main>
         <footer>
             <ul>
@@ -53,43 +58,8 @@
             </ul>
         </footer>
 
-        <!-- Generar el div#modalProducto y su contenido dinámicamente -->
-        <div class="" id="contenedorDescripLargo"><!--  se saco el class modal a proposito -->
-            <!-- <a class="cerrar" href="javascript:void(0)">X</a>
-            <img src="producto-de-ejemplo.jpg" alt="Nombre del producto" />
-            <h3>Producto</h3>
-            <p>Descripción</p>
-            <p>Precio: <span>$0</span></p>
-            <p>Categoría</p>
-            <button>Agregar</button> -->
-            <div>
-                <button type="button" class="btn  shadow-sm btn-violet-gradient w-100" id="vaciarCarrito">Vaciar carrito</button>
-            </div>
-            <div class="col-6">
-                <h2>Cantidad de productos: <span id="tuTotalCantidad"></span></h2>
-            </div>
-            <div class="col-6">
-                <h2>Precio Total: $ <span class="tuTotal">0</span></h2>
-            </div>
-            <div class="col-12 modal-body d-flex flex-column" id="contenedorItemCarrito">
-                <!--div de cada producto-->
+       
 
-            </div>
-        </div>
-
-        <!-- Generar el div#modalCarrito y su contenido dinámicamente
-        <div class="modal" id="modalCarrito">
-            <a class="cerrar" href="javascript:void(0)">X</a>
-            <p>Items: <span>3</span> - Total: <span>$0</span></p>
-            <hr />
-            <ul>
-                <li>Nombre del producto <span>$0</span> <span>0 items</span> <a href="#">Eliminar</a></li>
-                <li>Nombre del producto <span>$0</span> <span>0 items</span> <a href="#">Eliminar</a></li>
-                <li>Nombre del producto <span>$0</span> <span>0 items</span> <a href="#">Eliminar</a></li>
-            </ul>
-            <button>Vaciar</button>
-            <button>Ir al checkout</button>
-        </div> -->
 
         <script src="clases.js"></script>
         <script src="index.js"></script>
